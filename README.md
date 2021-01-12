@@ -1,3 +1,20 @@
+# Guaranteed for Life
+
+## Description:
+
+### Background Info:
+
+## Screenshots of Application:
+
+## Technologies Used:
+
+## Dependencies:
+
+## Getting Started:
+
+## Next Steps: Planned Future Enhancements
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
