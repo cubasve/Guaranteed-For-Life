@@ -1,27 +1,27 @@
-// import logo from './logo.svg';
-// import './App.css';
 import React from 'react';
+import './App.css';
 import companyData from './Data/companyData';
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 
-function App() {
+export default function App() {
   let data = companyData;
 
   return (
     <div className="App">
-      {data.map((company, index) => {
-        return (
-          <Card>
-            <Card.Img variant="top" src={company.image} />
-            <Card.Body>
-              <Card.Title>{company.name}</Card.Title>
-              <Card.Text>{company.category}</Card.Text>
-              {/* <Button variant="primary">{company.website}</Button> */}
-              <a href={company.website} target="_blank" rel="noopener noreferrer"></a>
-            </Card.Body>
-          </Card>
-        )
-      })}
+      <div className="company-cards">
+        {data.map((company, index) => {
+          return (
+            <Card key={index} style={{ width: '15rem' }} bg="secondary" text="white">
+              <Card.Img variant="top" src={company.image} />
+              <Card.Body>
+                <Card.Title>{company.name}</Card.Title>
+                <Button variant="primary" href={company.website} target="_blank" rel="noopener noreferrer">Website</Button>
+              </Card.Body>
+            </Card>
+          )
+        })}
+      </div>
+
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -40,5 +40,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

@@ -4,7 +4,7 @@ let companies = [
         image: '/images/jansport.jpeg',
         website: 'https://jansport.com',
         category: 'Bags',
-        product: [],
+        priceRange: 50,
     },
     {
         name: 'Eddie Bauer',
