@@ -1,5 +1,13 @@
 # Guaranteed for Life
 
+## Table of Contents:
+- [Description](#description)
+- [Background Info](#background-info)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+- [Next Steps](#next-steps)
+
 ## Description:
 
 ### Background Info:
