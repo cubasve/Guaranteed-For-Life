@@ -9,18 +9,22 @@
 - [Next Steps](#next-steps)
 
 ## Description:
+A list of companies that offer lifetime warranty on their products. This covers wear and tear, damages 
 
 ### Background Info:
 
-## Screenshots of Application:
+## Screenshots:
 
-## Technologies Used:
+## Technologies:
+- React
+
 
 ## Dependencies:
+- react-bootstrap
 
 ## Getting Started:
 
-## Next Steps: Planned Future Enhancements
+## Next Steps: 
 
 
 # Getting Started with Create React App

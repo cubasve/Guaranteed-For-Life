@@ -1,4 +1,4 @@
-let companies = [
+const companies = [
     {
         id: 1,
         name: 'Jansport',
@@ -6,6 +6,7 @@ let companies = [
         website: 'https://jansport.com',
         category: 'Bags',
         priceRange: 50,
+        country: '',
     },
     {
         id: 2,
@@ -74,7 +75,7 @@ let companies = [
         id: 11,
         name: 'Manduka',
         image: '/images/manduka.jpg',
-        website: 'https://manduka.com/',
+        website: 'https://ca.manduka.com/',
         category: 'Yoga Mats',
     },
     {
