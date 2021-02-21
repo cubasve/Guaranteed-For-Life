@@ -1,33 +1,20 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import companyData from './Data/companyData';
 import { Card, Button, Form } from 'react-bootstrap';
 
-
-export default class App extends Component {
-
-  state = {
-    companies: [],
-    category: '',
+const handleCategorySubmit = (e) => {
+  e.preventDefault();
+  try {
+    console.log('submitted!')
+  } catch (err) {
+    console.error(err);
   }
+}
 
-  componentDidMount() {
-    this.setState({ companies: companyData });
-  }
-
-  handleSelectCategory = (e) => {
-    this.setState({ category: e.target.value });
-  }
-
-  // getUniqueCategory(array, ) {
-
-  // }
-
-  render() {
-    const companies = this.state.companies;
-    const category = this.state.category;
-
-    // const filterCategory = companies.filter()
+export default function App() {
+  const [category, setCategory] = useState('');
+  const [data, setData] = useState(companyData);
 
     return (
       <div className="App">
@@ -35,22 +22,18 @@ export default class App extends Component {
         <div className="App-filter">
           <Form.Group>
             <Form.Label>FILTER BY CATEGORY:</Form.Label>
-            <Form.Control as="select" value={this.state.category} onChange={this.handleSelectCategory}>
-              <option value="Apparel">Apparel</option>
-              <option value="Toys">Toys</option>
-              <option value="Bags">Bags</option>
-              <option value="Cookware">Cookware</option>
-              <option value="Tools">Tools</option>
+            <Form.Control as="select">
+              <option value="Apparel" onClick={() => setCategory('Apparel')}>Apparel</option>
+              <option value="Toys" onClick={() => setCategory('Toys')}>Toys</option>
+              <option value="Bags" onClick={() => setCategory('Bags')}>Bags</option>
+              <option value="Cookware" onClick={() => setCategory('Cookware')}>Cookware</option>
+              <option value="Tools" onClick={() => setCategory('Tools')}>Tools</option>
             </Form.Control>
           </Form.Group>
         </div>
-
+        
         <div className="company-cards">
-
-        </div>
-
-        {/* <div className="company-cards">
-          {companyData.map((company, index) => {
+          {data.filter(company => company.category === category).map((company, index) => {
             return (
               <Card key={index} style={{ width: '15rem' }} bg="secondary" text="white">
                 <Card.Img variant="top" src={company.image} />
@@ -61,10 +44,9 @@ export default class App extends Component {
               </Card>
             )
           })}
-        </div> */}
+        </div>
       </div>
     );
-  }
 }
 
 
