@@ -33,6 +33,11 @@
   }
 }
 
+.filter {
+  width: 200px;
+  margin-left: 50px;
+}
+
 /* .App {
   text-align: center;
 }
