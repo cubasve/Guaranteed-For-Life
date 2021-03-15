@@ -1,9 +1,12 @@
 const express = require('express');
 const path = require('path');
-const favicon = require('favicon');
-const logger = require('logger');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
 
 const app = express();
+
+require('dotenv').config();
+require('./config/database');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -16,8 +19,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 //Catch all route:
 //* is needed for SPA's client-side routing to work properly
 //route matches every GET request 
-app.get('/*', function(req, res) {
-    res.sendFiler(path.join(__dirname, 'build', 'index.html'));
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 const port = process.env.PORT || 3001;
