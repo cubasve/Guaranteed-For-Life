@@ -38,8 +38,11 @@ export default function Companies() {
                  <Card key={index} style={{ width: '15rem' }} bg="secondary" text="white">
                    <Card.Img variant="top" src={company.image} />
                    <Card.Body>
-                     <Card.Title>{company.name}</Card.Title>
-                     <Button variant="primary" href={company.website} target="_blank" rel="noopener noreferrer">Website</Button>
+                     <Card.Title>
+                       <span className="company-name">{company.name}</span> 
+                       <span className="company-price">$ {company.price}</span>
+                     </Card.Title>
+                     <Button variant="primary" className="text-center">Add to Cart</Button>
                    </Card.Body>
                  </Card>
                )
@@ -52,8 +55,11 @@ export default function Companies() {
                 <Card key={index} style={{ width: '15rem' }} bg="secondary" text="white">
                   <Card.Img variant="top" src={company.image} />
                   <Card.Body>
-                    <Card.Title>{company.name}</Card.Title>
-                    <Button variant="primary" href={company.website} target="_blank" rel="noopener noreferrer">Website</Button>
+                    <Card.Title>
+                       <span className="company-name">{company.name}</span> 
+                       <span className="company-price">$ {company.price}</span>
+                     </Card.Title>
+                     <Button variant="primary" className="text-center">Add to Cart</Button>
                   </Card.Body>
                 </Card>
               )
